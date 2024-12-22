@@ -1,0 +1,14 @@
+json [
+    {
+        "id":1,
+        "question":"Koje destinacije su trenutno najpopularnije među turistima, i šta ih čini posebnim?"
+    },
+    {
+        "id":2,
+        "question":"Kakvi su paketi i popusti koje nudite za grupne ture ili specijalizovane tematske ture (npr. kulturne, avanturističke, wellness)?"
+    },
+    {
+        "id":3,
+        "question":"Koje su opcije smještaja koje nudite i kako birate partnere za smještaj, kako bi obezbijedili kvalitetnu uslugu?"
+    }
+]

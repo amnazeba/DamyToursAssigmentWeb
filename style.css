@@ -1,0 +1,625 @@
+body {
+  background-image: url("download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding-top: 70px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+.naslov {
+margin-top: 5%;
+margin-left: 40%;
+color: white
+}
+
+
+.navdiv {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: lightskyblue;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.navdiv .logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navdiv ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.navdiv ul li {
+  margin-left: 20px;
+}
+.navdiv ul li a {
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.navdiv ul li a:hover {
+  background-color: darkblue;
+}
+
+#Gallery {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+#Gallery .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#Gallery h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  color: black;
+  margin-bottom: 40px;
+}
+#Gallery .gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+#Gallery .gallery-item {
+  flex: 1 1 calc(33.333% - 20px); /* Ensures 3 items per row, with space in between */
+  margin-bottom: 20px;
+}
+#Gallery .img-fluid {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+  width: 100%;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-section {
+  margin: 0 20px;
+}
+footer .footer-section p {
+  margin: 0;
+}
+
+#contact-info {
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 8px;
+  margin-top: 30px;
+  text-align: center;
+  flex-grow: 1; /* Ensures contact section takes up remaining space */
+}
+
+.kontakti {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.kontakti p {
+  font-size: 16px;
+  margin: 5px;
+}
+
+.kontakti p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.kontakti p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navdiv ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navdiv ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  footer {
+    padding: 15px;
+  }
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* On smaller screens, 2 items per row */
+  }
+}
+.table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+#signup {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: paleturquoise;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#signup h2 {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.signup-form input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+}
+
+.signup-form button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: lightskyblue;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# za galeriju js dodatak*/
+/* Galerija stilovi */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-item {
+  width: 30%;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+/* Modal stajlovi */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal {
+  display: none;  
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding-top: 60px;
+}
+
+/* teme stilizacija */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Svijetla tema */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+/* Tamna tema */
+.dark-theme {
+  background-color: #333;
+  color: white;
+}
+
+/* Mala veličina fonta */
+.small-font {
+  font-size: 14px;
+}
+
+/* Velika veličina fonta */
+.large-font {
+  font-size: 18px;
+}
+
+/* Stil za dugmadi */
+.teme button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+/* Stil za faq */
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  background-color: #e2e2e2;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #555;
+}
+/* Stilizovanje za View More dugme */
+.view-more {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: black; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; /* Efekat prelaza boje */
+}
+
+.view-more:hover {
+  background-color:lightcyan; 
+}
+/* Stilizovanje za teme */
+ .teme {
+    display: flex; 
+    gap: 10px; /* Razmak između dugmadi */
+    justify-content: center;
+    margin-top: 20px; /* Dodaje razmak od vrha stranice */
+}
+
+.teme button {
+    background-color: #ADD8E6; 
+    color: black; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    border: none; 
+    border-radius: 15px; 
+    cursor: pointer; /* Ruka pokazuje kada pređete mišem */
+    transition: background-color 0.3s, transform 0.2s; /* Efekti pri hoveru */
+}
+
+.teme button:hover {
+    background-color: lightskyblue; 
+    transform: scale(1.1); /* Malo povećanje dugmadi pri hoveru */
+}
+
+.teme button:focus {
+    outline: none; 
+}
+
+/*stilizovanje according*/
+.according-header {
+  background-color: lightblue; 
+  color: #fff;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.according-header:hover {
+  background-color: blue; 
+}
+
+/* Stil za Accordion Content (tekst koji se otvara) */
+.according-content {
+  display: none;
+  padding: 20px;
+  background-color: lightblue; 
+  color: black; 
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+/* Aktivni status Accordion Header */
+.according-header.active {
+  background-color: blue; 
+}
+
+/* Stil za Listu u accordion content */
+.according-content ul {
+  list-style: inside;
+}
+
+.according-content li {
+  margin-bottom: 10px;
+}
+
+/* Dodavanje animacije za otvaranje */
+.according-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* stilizovanje za vrijeme */
+
+.weather-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Naslov za vremenske podatke */
+.weather-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+
+.weather-container p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: darkgray; 
+}
+
+
+.weather-container .label {
+  font-weight: bold;
+  color: gray; 
+}
+
+
+.weather-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* uspjesno neuspjesno*/
+.toast-success {
+  background-color: green; 
+}
+
+.toast-error {
+  background-color: red;
+}
+
+ /*pitanja*/
+ .faqQuestion {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  padding: 20px;
+  background-color: lightblue;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faqQuestion h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+.faqQuestion form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faqQuestion input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.faqQuestion input[type="text"]:focus {
+  outline: none;
+  border-color: black;
+}
+
+.faqQuestion button {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: none
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faqQuestion button:hover {
+  background-color: #d4af37;
+}
+
+ /*ponude*/
+ #ponude {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-card {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.offer-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.offer-card p {
+  margin: 0 0 5px;
+  color: #666;
+}

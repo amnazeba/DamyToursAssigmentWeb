@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Vikend u Parizu",
+      "destination": "Pariz, Francuska",
+      "price": 399,
+      "description": "Doživite romantiku Pariza uz vodiča."
+    },
+    {
+      "title": "Ljetovanje u Antaliji",
+      "destination": "Antalija, Turska",
+      "price": 599,
+      "description": "All-inclusive paket za cijelu porodicu."
+    },
+    {
+      "title": "Zimski odmor na Jahorini",
+      "destination": "Jahorina, Bosna i Hercegovina",
+      "price": 199,
+      "description": "Skijanje, snowboarding i uživanje u planinama."
+    }
+  ]
+  
+  

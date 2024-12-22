@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damy Tours</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = { lat: 43.8486, lng: 18.3564 }; // Example location: Sarajevo
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <nav class="navdiv">
+            <div class="logo"><a href="#">Damy Tours</a></div>
+            <ul>
+                <li><a href="inedx.html">Početna</a> </li>
+                <li><a href="about us.html">O nama</a> </li>
+                <li><a href="konakti.html">Kontakti</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href=raspored.html>Raspored vožnji</a>
+                <li><a href="ponude.html">Naše Ponude</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="about">
+        <div class="text">
+            <h3>O nama</h3>
+            <p>Damy Tours d.o.o. Sarajevo osnovan je 15.08.2008. godine sa jasnom vizijom ...</p>
+            <p>Naša kompanija ne samo da se ponosi kvalitetom usluga, već i ...</p>
+            <a href="detalji.html" class="view-more">Detaljnije</a> <!-- View More dugme -->
+        </div>
+    </section>
+    <!-- faq -->
+<section id="faq">
+    <h3>Često postavljana pitanja:</h3>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-header">Koje usluge nudite?</button>
+            <div class="accordion-content">
+                <p>Nudimo usluge prevoza putnika, iznajmljivanje vozila sa vozačem i organizaciju turističkih tura.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Kako mogu rezervisati vožnju?</button>
+            <div class="accordion-content">
+                <p>Rezervaciju možete izvršiti putem naše web stranice, e-maila ili telefonom.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Da li nudite međunarodne ture?</button>
+            <div class="accordion-content">
+                <p>Da, organizujemo ture širom Evrope sa iskusnim vodičima i vozačima.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="teme">
+        <button onclick="changeTheme('light')">Light Theme</button>
+        <button onclick="changeTheme('dark')">Dark Theme</button>
+        <button onclick="changeFontSize('small')">Small Font</button>
+        <button onclick="changeFontSize('large')">Large Font</button>
+    </div>
+    <!-- Mapa sa lokacijom -->
+    <section id="map-section">
+        <h4>Naša Lokacija</h4>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </section>
+
+    <!-- Kontakt informacije -->
+    <section id="contact-info">
+        <h4>Kontaktirajte nas</h4>
+        <div class="kontakti">
+            <p><b>Adresa:</b> Džemala Bijedića 195 a, Sarajevo</p>
+            <p><b>Telefon:</b> <b>Damir</b>: 061 098 097, <b>Amir</b>: 061 096 097</p>
+            <p><b>Email:</b> <a href="mailto:info@damy-tours.com">info@damy-tours.com</a></p>
+            <p><b>Kontakt osoba:</b> <a href="mailto:amela.vatres@stu.ibu.edu.ba">Amela Vatreš</a></p>
+        </div>
+    </section>
+
+    <!-- Footer koji je pozicioniran ispod svih sadržaja -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>Amna Zeba</p>
+                <p>Foundations of Web Development</p>
+            </div>
+        </div>
+    </footer>
+    <script src="teme.js"></script>
+    <script src="faq.js"></script>
+
+</body>
+</html>

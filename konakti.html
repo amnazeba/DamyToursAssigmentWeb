@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damy Tours</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>  
+        <nav class="navdiv">
+            <div class="logo"><a href="index.html">Damy Tours</a></div>
+            <ul>
+                <li><a href="index.html">Početna</a> </li>
+                <li><a href="about us.html">O nama</a> </li>
+                <li><a href="kontakti.html">Kontakti</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="raspored.html">Raspored vožnji</a></li>
+                <li><a href="ponude.html">Naše Ponude</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="teme">
+        <button onclick="changeTheme('light')">Light Theme</button>
+        <button onclick="changeTheme('dark')">Dark Theme</button>
+        <button onclick="changeFontSize('small')">Small Font</button>
+        <button onclick="changeFontSize('large')">Large Font</button>
+    </div>
+    
+    <div class="kontakti">
+        <p>Džemala Bijedića 195 a </p>
+        <p>061 098 097 <b>Damir</b></p>
+        <p>061 096 097 <b>Amir</b></p>
+        <p><a href="mailto:info@damy-tours.com">E-mail: info@damy-tours.com</a></p>
+    </div>
+
+    <div class="faqQuestion">
+        <h2>Pitanja</h2>
+        <form id="questionForm" autocomplete="off">
+            <input
+                type="text"
+                id="userQuestion"
+                name="userQuestion"
+                placeholder="Napisi svoje pitanje ovdje..."
+                required
+            />
+            <button type="button" id="success">Pošalji</button>
+        </form>
+        <div id="questionsContainer"></div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>Amna Zeba</p>
+            <p>Foundations of Web Development</p>
+            <p>&copy; 2024 Damy Tours</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="teme.js"></script>
+    <script src="pitanja.js"></script>
+    
+</body>
+</html>

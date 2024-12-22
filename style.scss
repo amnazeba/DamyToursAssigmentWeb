@@ -1,0 +1,267 @@
+// Definisanje promenljivih
+$primary-color: lightskyblue;
+$footer-bg-color: black;
+$footer-text-color: white;
+$font-family: 'Poppins', sans-serif;
+$heading-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$background-color: lightblue;
+$border-radius: 8px;
+
+// Mixin za box-shadow
+@mixin box-shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+// Body stilizacija
+body {
+    background-image: url("download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding-top: 70px;
+    font-family: $font-family;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensures footer stays at the bottom */
+}
+
+// Navbar stilizacija
+.navdiv {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $primary-color;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    .logo a {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        margin-right: 20px;
+        
+        li {
+            margin-left: 20px;
+
+            a {
+                color: white;
+                font-size: 16px;
+                padding: 10px 15px;
+                transition: background-color 0.3s;
+                border-radius: 5px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: darkblue;
+                }
+            }
+        }
+    }
+}
+
+// Galerija
+#Gallery {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-family: $heading-font-family;
+        text-align: center;
+        color: black;
+        margin-bottom: 40px;
+    }
+
+    .gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(33.333% - 20px); /* Ensures 3 items per row, with space in between */
+        margin-bottom: 20px;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+        @include box-shadow(0, 4px, 8px, rgba(0, 0, 0, 0.1)); // Using the mixin for box-shadow
+    }
+}
+
+// Footer
+footer {
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;  /* Ensures footer stays at the bottom */
+    width: 100%;
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 0 20px;
+    }
+
+    .footer-section p {
+        margin: 0;
+    }
+}
+
+// Kontakt sekcija
+#contact-info {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: $border-radius;
+    margin-top: 30px;
+    text-align: center;
+    flex-grow: 1;  /* Ensures contact section takes up remaining space */
+}
+
+.kontakti {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.kontakti p {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.kontakti p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.kontakti p a:hover {
+    text-decoration: underline;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .navdiv ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navdiv ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* On smaller screens, 2 items per row */
+    }
+}
+
+// Tabela za raspored
+.table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+// Sign Up Form
+#signup {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: paleturquoise;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#signup h2 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form label {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.signup-form input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+}
+
+.signup-form button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: lightskyblue;
+}
